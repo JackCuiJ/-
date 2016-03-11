@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>瀑布流布局</title>
+	<link rel="stylesheet" type="text/css" href="css/atext30_css.css">
+</head>
+<body>
+	<div id="main">
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/2.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/3.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/5.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/7.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/9.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/2.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/3.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/5.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/7.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/9.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/2.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/3.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/5.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/7.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/9.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/2.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/3.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/5.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/7.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/9.jpg" alt="">
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="img/12.jpg" alt="">
+			</div>
+		</div>						
+	</div>
+	<script type="text/javascript">
+		window.onload=function() {
+			waterfall('main','box');
+			var dataInt={"data":[{"src":"11.jpg"},{"src":"8.jpg"},{"src":"4.jpg"},{"src":"11.jpg"},{"src":"11.jpg"},{"src":"9.jpg"},]};
+			window.onscroll=function() {
+				if(checkScrollSlide) {
+					var oParent=document.getElementById('main');
+					//将数据块渲染到页面尾部
+					for(var i=0;i<dataInt.data.length;i++) {
+						var oBox=document.createElement('div');
+						oBox.className='box';
+						oParent.appendChild(oBox);
+						var oPic=document.createElement('div');
+						oPic.className='pic';
+						oBox.appendChild(oPic);
+						var oImg=document.createElement('img');
+						oImg.src='img/'+dataInt.data[i].src;
+						oPic.appendChild(oImg);
+					}
+					waterfall('main','box');
+				}
+			}
+		}
+
+		function waterfall (prent,box) {
+			//将main下所有box取出来
+			var oParent=document.getElementById(prent);
+			var oBoxs=getByClass(oParent,box);
+			//计算box宽度
+			var oBoxW=oBoxs[0].offsetWidth;
+			var cols=Math.floor(document.documentElement.clientWidth/oBoxW);
+			oParent.style.cssText='width:'+oBoxW*cols+'px;margin:0 auto';
+			//存放高度的数组
+			var hArr=[];
+			for(var i=0;i<oBoxs.length;i++) {
+				if(i<cols) {
+					hArr.push(oBoxs[i].offsetHeight);
+				}else {
+					var minH=Math.min.apply(null,hArr);
+					var index=getMinhIndex(hArr,minH);
+					oBoxs[i].style.position='absolute';
+					oBoxs[i].style.top=minH+'px';
+					oBoxs[i].style.left=oBoxW*index+'px';
+					hArr[index]+=oBoxs[i].offsetHeight;
+				}
+			}	
+		}
+		//根据class获取元素
+		function getByClass (prent,clsName) {
+			var boxArr=new Array()
+			var oElements=prent.getElementsByTagName('*');
+			for(var i=0;i<oElements.length;i++) {
+				if(oElements[i].className==clsName) {
+					boxArr.push(oElements[i]);
+				}	
+			}
+			return boxArr;
+		}
+		//获取box的高度，并且将box块叠到下面平铺
+		function getMinhIndex(arr,val) {
+			for(var i in arr) {
+				if(arr[i]==val) {
+					return i;
+				}
+			}
+		}
+		//检测是否具备滚动加载数据块的条件
+		function checkScrollSlide() {
+			var oParent=document.getElementById('main');
+			var oBoxs=getByClass(oParent,'box');
+			var lastBoxH=oBoxs[oBoxs.length-1].offsetTop+Math.floor((oBoxs.length-1).ofsetHeight/2);
+			var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
+			var height=document.body.clientHeight || document.documentElement.clientHeight;
+			return lastBoxH<(scrollTop+height)?true:false;
+		}
+	</script>	
+</body>
+</html>
